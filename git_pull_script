@@ -25,11 +25,12 @@ if test $# = 1 ;
 
 		cd $i
 		echo -e "${GREEN}Pulling from github...${NOCOLOR}"
-		echo -e "${YELLOW}Pulling ${PROGRAM} from its repsitory${NOCOLOR}" #prints the currently updating program
+		echo -e "${YELLOW}Pulling ${PROGRAM} from its repository${NOCOLOR}" #prints the currently updating program
 		git pull
 
 	done
+	echo -e "${BLUE}Pulling Complete!${NOCOLOR}"
 else
 	echo -e "${RED}Not enough arguments!${NOCOLOR}"
 	echo "Usage: $0 file_with_folder_addresses"	
-fi	
+fi

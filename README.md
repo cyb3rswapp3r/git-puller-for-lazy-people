@@ -1,7 +1,7 @@
 <p align="center">
-    •<a href="git-puller-for-lazy-people">Overview</a>•
-    <a href="usage">Usage</a>•
-    <a href="soon">Coming Soon</a>•
+    •<a href="#git-puller-for-lazy-people">Overview</a> •
+    <a href="#usage">Usage</a> •
+    <a href="#soon">Coming Soon</a>•
 </p>
 
 # Git-Puller-For-Lazy-People
