@@ -32,5 +32,5 @@ if test $# = 1 ;
 	echo -e "${BLUE}Pulling Complete!${NOCOLOR}"
 else
 	echo -e "${RED}Not enough arguments!${NOCOLOR}"
-	echo "Usage: $0 file_with_folder_addresses"	
+	echo "Usage: $0 git_repos.txt"	
 fi
