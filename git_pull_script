@@ -1,0 +1,35 @@
+#! /usr/bin/env bash
+# do git pull on all the cloned repositories I have coz i'm too lazy to do it by myself
+
+RED="\033[1;31m"
+GREEN="\033[1;32m"
+BLUE="\e[1;34m" # setting some colours
+YELLOW="\e[93m"
+NOCOLOR="\033[0m"
+
+
+if test $# = 1 ;
+	then
+	echo -e "${BLUE}Running Script...${NOCOLOR}"
+	mapfile -t array < $1 
+	for i in ${array[@]}
+	do
+		#echo $i #shows the current directory
+
+		IFS="/" read -a programarray <<< $i # splits the string with "/" as the delimiter and puts it as singular elements into programarray
+
+		for s in ${programarray[@]}
+		do 
+			PROGRAM=${programarray[-1]} #sets the currently selected repository's name
+		done
+
+		cd $i
+		echo -e "${GREEN}Pulling from github...${NOCOLOR}"
+		echo -e "${YELLOW}Pulling ${PROGRAM} from its repsitory${NOCOLOR}" #prints the currently updating program
+		git pull
+
+	done
+else
+	echo -e "${RED}Not enough arguments!${NOCOLOR}"
+	echo "Usage: $0 file_with_folder_addresses"	
+fi	
