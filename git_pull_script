@@ -18,7 +18,7 @@ if test $# = 1 ;
 
 		IFS="/" read -a programarray <<< $i # splits the string with "/" as the delimiter and puts it as singular elements into programarray
 
-		for s in ${programarray[@]}
+		for p in ${programarray[@]}
 		do 
 			PROGRAM=${programarray[-1]} #sets the currently selected repository's name
 		done
